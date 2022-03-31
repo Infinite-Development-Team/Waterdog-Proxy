@@ -15,16 +15,15 @@
 
 package dev.waterdog.waterdogpe.command.defaults;
 
-import dev.waterdog.waterdogpe.VersionInfo;
 import dev.waterdog.waterdogpe.WaterdogPE;
 import dev.waterdog.waterdogpe.command.Command;
 import dev.waterdog.waterdogpe.command.CommandSender;
 import dev.waterdog.waterdogpe.command.CommandSettings;
 
-public class InfoCommand extends Command {
+public class BungeeCommand extends Command {
 
-    public InfoCommand() {
-        super("wdinfo", CommandSettings.builder()
+    public BungeeCommand() {
+        super("bungee", CommandSettings.builder()
                 .setDescription("waterdog.command.info.description")
                 .setUsageMessage("waterdog.command.info.usage")
                 .setPermission("waterdog.command.info.permission")
@@ -33,13 +32,7 @@ public class InfoCommand extends Command {
 
     @Override
     public boolean onExecute(CommandSender sender, String alias, String[] args) {
-        VersionInfo versionInfo = WaterdogPE.version();
-        sender.sendMessage("§bRunning WaterdogPE version §3" + versionInfo.baseVersion() + "§b!\n" +
-                "§3Build Version: §b" + versionInfo.buildVersion() + "\n" +
-                "§3Latest Protocol: §b" + versionInfo.latestProtocolVersion() + "\n" +
-                "§aBranch: §b " + versionInfo.branchName() + "§3 CommitId:§b " + versionInfo.commitId() + "\n" +
-                "§3Author: §b" + versionInfo.author() + "\n" +
-                "§3Developer Mode: " + (versionInfo.debug() ? "§cenabled" : "§adisabled"));
+        sender.sendMessage("§9This server is running Waterdog version 1.1.6 by WaterdogTEAM" );
         return true;
     }
 }

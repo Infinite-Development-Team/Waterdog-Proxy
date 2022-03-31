@@ -47,7 +47,7 @@ public class WaterdogPE {
         logger.info("§3Software Authors: " + versionInfo.author());
 
         if (versionInfo.buildVersion().equals("#build") || versionInfo.branchName().equals("unknown")) {
-            logger.warning("Custom build? Unofficial builds should be not run in production!");
+            logger.warning("Custom build? Unofficial builds should be not run in production!!!!");
         } else {
             logger.info("§3Discovered branch §b" + versionInfo.branchName() + "§3 commitId §b" + versionInfo.commitId());
         }
